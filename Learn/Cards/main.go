@@ -1,21 +1,41 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	card := newCard()
-	cards := []string{"Ace of spades", newCard()}
-	cards = append(cards, "six of hearts")
+	//card := newCard()
+	//cards := deck{"Ace of spades", newCard()}
+	//cards = append(cards, "six of hearts")
+	// fmt.Println(card)
+	//fmt.Println(cards)
+	//direct declaration
+	//fmt.Println("using direct method")
+	// for c := range cards {
+	// 	fmt.Println(cards[c])
+	// }
+	// fmt.Println("using deck type")
+	// cards.print()
 
-	fmt.Println(card)
-	fmt.Println(cards)
+	//cards := newDeck()
+	// hand, remainingCards := cards.deal(5)
+	// fmt.Println("hand")
+	// hand.print()
+	// fmt.Println("remiaining cards")
+	// remainingCards.print()
 
-	for c := range cards {
-		fmt.Println(cards[c])
-	}
+	// fmt.Println("single string....")
+	// fmt.Println(cards.toString())
+
+	//cards.saveToFile("my_cards")
+
+	cards := newDeckFromFile("my_cards")
+	cards.shufffle()
+	cards.print()
+
+	// greeting := "Hi there"
+	// fmt.Println([]byte(greeting))
+
 }
 
-func newCard() string {
-	return "Ace of diamonds"
-}
+// func newCard() string {
+// 	return "Ace of diamonds"
+// }
